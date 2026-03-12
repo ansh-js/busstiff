@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasty Bites Tiffin</title>
+    <link rel="stylesheet" href="busstyle.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Tasty Bites Tiffin</h1>
+    <p>Healthy & Freshly Prepared Every Day</p>
+</header>
+
+<nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('menu')">Menu</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section active">
+    <h2>Welcome to Our Tiffin Center</h2>
+    <p>Delicious South Indian breakfast and evening snacks available daily.</p>
+    <br>
+    <button onclick="showPage('menu')">View Menu</button>
+    <h2>Watch Our Food Being Prepared</h2>
+
+    <video width="600" autoplay>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="section">
+    <h2>Our Menu</h2>
+    <br>
+
+    <div class="menu">
+        <div class="menu-item">
+            <img src="idli.jpeg">
+            <h3>Idli</h3>
+            <p>Soft idli with chutney</p>
+            <div class="price">₹50</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="dosa.jpeg">
+            <h3>Dosa</h3>
+            <p>Crispy dosa with sambar</p>
+            <div class="price">₹60</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="poori.jpeg">
+            <h3>Poori</h3>
+            <div class="price">₹80</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="upma.jpeg">
+            <h3>Upma</h3>
+            <div class="price">₹40</div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+        We serve fresh homemade tiffins every morning and evening.
+        Our mission is to provide healthy, hygienic, and affordable food.
+    </p>
+    <br>
+    <p>📍 Main Road, XYZ, Hyderabad</p>
+    <p>⏰ 6:00 AM – 10:00 AM | 6:00 PM – 8:00 PM</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <br>
+    <form>
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea rows="4" placeholder="Your Message"></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Tasty Bites Tiffin Center | All Rights Reserved
+</footer>
+
+<script>
+    function showPage(pageId){
+        let sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
